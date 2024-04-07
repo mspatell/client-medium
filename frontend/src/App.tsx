@@ -6,15 +6,14 @@ import { Blog } from './pages/Blog'
 function App() {
 
   return (
-    <>
-      <BrowserRouter>
+    <BrowserRouter>
         <Routes>
+          <Route path="/" element={<Signup />} />
           <Route path="/signup" element={<Signup />} />
           <Route path="/signin" element={<Signin />} />
           <Route path="/blog/:id" element={<Blog />} />
         </Routes>
       </BrowserRouter>
-    </>
   )
 }
 
