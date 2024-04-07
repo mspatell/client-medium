@@ -3,6 +3,10 @@ import { Hono } from 'hono';
 // Create the main Hono app
 const app = new Hono();
 
+app.get('/', (c) => {
+	return c.text('hello')
+})
+
 app.post('/api/v1/signup', (c) => {
 	return c.text('signup route')
 })
@@ -19,11 +23,11 @@ app.get('/api/v1/blog/:id', (c) => {
 
 app.post('/api/v1/blog', (c) => {
 
-	return c.text('signin route')
+	return c.text('blog route')
 })
 
 app.put('/api/v1/blog', (c) => {
-	return c.text('signin route')
+	return c.text('update blog route')
 })
 
 export default app;
