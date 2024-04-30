@@ -15,7 +15,11 @@ app.get("/", (c) => {
   return c.text("hello");
 });
 
-app.post("/api/v1/signup", async (c) => {
+// app.get("/signup", (c) => {
+//   return c.text("hellosignupsignupsignup");
+// });
+
+app.post("/signup", async (c) => {
   const body = await c.req.json();
   const prisma = new PrismaClient({
     datasourceUrl: c.env.DATABASE_URL,
